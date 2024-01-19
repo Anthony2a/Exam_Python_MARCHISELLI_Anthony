@@ -1,16 +1,15 @@
 class Tache():
-    def __init__(self, titre, description) -> None:
+    def __init__(self, titre, description, complete) -> None:
         self.title = titre
         self.desc = description
-        self.completed = False
+        self.completed = complete
     
     def __eq__(self, other):
         return self.title == other.title and \
-               self.desc == other.desc and \
-                self.completed == other.completed
+               self.desc == other.desc
 
-    def setComplete(self):
-        self.completed = True
+    def setComplete(self, boole):
+        self.completed = boole
 
     def getComplete(self):
         return self.completed
